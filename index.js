@@ -261,7 +261,7 @@ function* get_repos(org) {
   // handle github pagination for orgs with many repos
   while (++page) {
     var res = yield request({
-        uri    : 'https://api.github.com/users/' + org + '/repos?page=' + page
+        uri    : 'https://api.github.com/orgs/' + org + '/repos?page=' + page
       , headers: header
       , auth   : this.auth
       , json   : true
